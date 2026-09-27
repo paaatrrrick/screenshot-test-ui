@@ -50,7 +50,7 @@ export default function UsagePage() {
                 <SelectItem value="period">Billing period</SelectItem>
               </SelectContent>
             </Select>
-            <Button variant="outline" render={<Link href="/settings?tab=billing" />}>
+            <Button variant="outline" nativeButton={false} render={<Link href="/settings?tab=billing" />}>
               Manage plan
             </Button>
           </>
@@ -87,7 +87,7 @@ export default function UsagePage() {
             <CardTitle>Plan limits</CardTitle>
             <CardDescription>{org.plan} plan</CardDescription>
             <CardAction>
-              <Button variant="ghost" size="sm" render={<Link href="/settings?tab=billing" />}>
+              <Button variant="ghost" size="sm" nativeButton={false} render={<Link href="/settings?tab=billing" />}>
                 Upgrade
               </Button>
             </CardAction>

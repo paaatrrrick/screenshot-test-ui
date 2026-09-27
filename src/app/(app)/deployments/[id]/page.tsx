@@ -67,7 +67,7 @@ export default function DeploymentPage() {
         }
         actions={
           <>
-            <Button variant="outline" render={<a href={deployment.url} target="_blank" rel="noreferrer" />}>
+            <Button variant="outline" nativeButton={false} render={<a href={deployment.url} target="_blank" rel="noreferrer" />}>
               <ExternalLink data-icon="inline-start" /> Visit
             </Button>
             <Button variant="outline" onClick={() => toast("Redeploy queued", { description: `${deployment.commit} · ${deployment.branch}` })}>

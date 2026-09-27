@@ -102,7 +102,7 @@ function ProjectInner() {
         }
         actions={
           <>
-            <Button variant="outline" render={<a href={project.productionUrl} target="_blank" rel="noreferrer" />}>
+            <Button variant="outline" nativeButton={false} render={<a href={project.productionUrl} target="_blank" rel="noreferrer" />}>
               <ExternalLink data-icon="inline-start" /> Visit
             </Button>
             <Button onClick={() => toast.success("Deployment queued", { description: `${project.name} · main` })}>
@@ -189,7 +189,7 @@ function ProjectInner() {
               </CardContent>
               {latest && (
                 <CardFooter className="gap-2 border-t">
-                  <Button variant="outline" size="sm" render={<Link href={`/deployments/${latest.id}`} />}>
+                  <Button variant="outline" size="sm" nativeButton={false} render={<Link href={`/deployments/${latest.id}`} />}>
                     View build
                   </Button>
                   <Button variant="outline" size="sm" onClick={() => toast("Rollback started", { description: "Promoting previous deployment." })}>

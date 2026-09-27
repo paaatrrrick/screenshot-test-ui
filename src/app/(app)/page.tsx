@@ -30,10 +30,10 @@ export default function OverviewPage() {
         description="Everything happening across Orbit Labs in the last 24 hours."
         actions={
           <>
-            <Button variant="outline" render={<Link href="/projects" />}>
+            <Button variant="outline" nativeButton={false} render={<Link href="/projects" />}>
               View projects
             </Button>
-            <Button render={<Link href="/projects?new=1" />}>
+            <Button nativeButton={false} render={<Link href="/projects?new=1" />}>
               <Plus data-icon="inline-start" /> New project
             </Button>
           </>
@@ -58,7 +58,7 @@ export default function OverviewPage() {
             <CardTitle>Traffic</CardTitle>
             <CardDescription>Requests and errors per hour, all production projects</CardDescription>
             <CardAction>
-              <Button variant="ghost" size="sm" render={<Link href="/usage" />}>
+              <Button variant="ghost" size="sm" nativeButton={false} render={<Link href="/usage" />}>
                 Usage <ArrowRight data-icon="inline-end" />
               </Button>
             </CardAction>
@@ -88,7 +88,7 @@ export default function OverviewPage() {
             <CardTitle>Active incidents</CardTitle>
             <CardDescription>{openIncidents.length} requiring attention</CardDescription>
             <CardAction>
-              <Button variant="ghost" size="sm" render={<Link href="/incidents" />}>
+              <Button variant="ghost" size="sm" nativeButton={false} render={<Link href="/incidents" />}>
                 All <ArrowRight data-icon="inline-end" />
               </Button>
             </CardAction>
@@ -122,7 +122,7 @@ export default function OverviewPage() {
             <CardTitle>Recent deployments</CardTitle>
             <CardDescription>Latest builds across all projects</CardDescription>
             <CardAction>
-              <Button variant="ghost" size="sm" render={<Link href="/deployments" />}>
+              <Button variant="ghost" size="sm" nativeButton={false} render={<Link href="/deployments" />}>
                 All <ArrowRight data-icon="inline-end" />
               </Button>
             </CardAction>

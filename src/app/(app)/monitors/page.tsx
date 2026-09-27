@@ -26,7 +26,7 @@ export default function MonitorsPage() {
         title="Monitors"
         description="Synthetic uptime checks from multiple regions."
         actions={
-          <Button render={<Link href="/monitors/new" />} data-testid="create-monitor">
+          <Button nativeButton={false} render={<Link href="/monitors/new" />} data-testid="create-monitor">
             <Plus data-icon="inline-start" /> Create monitor
           </Button>
         }
